@@ -60,6 +60,6 @@ const fetchJobs = async (): Promise<void> => {
   }
 };
 
-cron.schedule('5 * * * * *', fetchJobs);
+cron.schedule('0 0 * * *', fetchJobs);
 
 export default app;
