@@ -51,7 +51,7 @@ const fetchJobs = async (): Promise<void> => {
       // Init the connection to supabase and store the data to supabase scraped from the hiring companies
       const initSupabase = async (): Promise<void> => {
         const { data, error } = await supabase
-          .from('scraper')
+          .from('scraper') // table name
           .upsert([{ jobs: jobListings }])
           .select();
         console.log(error);
