@@ -7,7 +7,7 @@ dotenv.config({ path: ".env" });
 const supabaseUrl = process.env.SUPABASE_URL
 const supabaseAnonKey = process.env.SUPABASE_ANON_KEY
 
-
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Create the connection to supabase using the Project URL and anon public key
+const supabase = createClient(supabaseUrl, supabaseAnonKey); 
 
 export default supabase;
